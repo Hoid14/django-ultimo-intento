@@ -1,0 +1,31 @@
+<!-- templates/finanzas_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Finanzas</title>
+</head>
+<body>
+    <h1>Lista de Finanzas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Valor</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for finanza in finanzas %}
+            <tr>
+                <td>{{ finanza.titulo }}</td>
+                <td>{{ finanza.valor }}</td>
+                <td>{{ finanza.fecha }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
